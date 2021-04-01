@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root {
+  --clr-dark-cyan: hsl(185, 75%, 39%);
+  --clr-dark-blue: hsl(229, 23%, 23%);
+  --clr-grayish-blue: hsl(227, 10%, 46%);
+
+  --clr-neutral: hsl(0, 0%, 59%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  font-size: 1.125rem;
+  min-height: 100vh;
+}
+
+hr {
+  margin-top: 1.5em;
+  border: 0.5px solid lightgray;
+}
+
+.heading {
+  color: var(--clr-dark-blue);
+  font-weight: 700;
+}
+
+.accent {
+  color: var(--clr-neutral);
+  font-weight: 400;
+}
+
+.container {
+  background-color: var(--clr-dark-cyan);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-image: url(./images/bg-pattern-top.svg),
+    url(./images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+
+  overflow: hidden;
+}
+
+.bg--pattern-top,
+.bg--pattern-btm {
+  position: absolute;
+}
+
+/* .bg--pattern-top {
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.bg--pattern-btm {
+  right: 0;
+  bottom: 0;
+  transform: translate(50%, 50%);
+} */
+
+.card {
+  width: 85%;
+  max-width: 350px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  box-shadow: 0 0 3em rgba(0, 0, 0, 0.3);
+
+  position: relative;
+}
+
+.card__header {
+  width: 100%;
+  background-image: url('/images/bg-pattern-card.svg');
+  padding: 3.5em;
+  border-radius: 20px 20px 0 0;
+}
+
+.card__avatar {
+  margin-top: -3em;
+}
+
+.card__avatar img {
+  border-radius: 50%;
+}
+
+.card__location {
+  margin-bottom: 1em;
+  margin-top: -1em;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer__item > h4 {
+  margin-bottom: 0;
+}
+
+@media (max-width: 375px) {
+  .container {
+    background-position: right 40vw bottom 40vh, left 40vw top 40vh;
+  }
+}
